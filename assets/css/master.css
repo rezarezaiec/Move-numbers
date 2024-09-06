@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "poppins";
+  src: url("../../public/fonts/Poppins/Poppins-Medium.ttf");
+  font-weight: 500;
+}
+body {
+  font-family: "poppins";
+  font-weight: 500;
+  background: linear-gradient(135deg, #060025, #a494ff);
+  color: #333;
+}
+/* ------------------ Start: CSS Variables ------------------ */
+:root {
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --input-bg-color: #f4f7f9;
+  --placeholder-color: rgba(0, 0, 0, 0.4);
+  --focus-border-color: #5c9aff;
+  --btn-primary-bg: #5c9aff;
+  --btn-primary-shadow: rgba(92, 154, 255, 0.4);
+  --btn-secondary-bg: #ff6b6b;
+  --btn-secondary-shadow: rgba(255, 107, 107, 0.4);
+  --btn-text-color: #ffffff;
+  --circle-bg-color: #e8ecf0;
+  --circle-text-color-dark: rgba(0, 0, 0, 0.8);
+  --circle-border-color: #d0d4da;
+  --circle-odd-bg-color: #b0bec5;
+  --circle-even-border-color: #90a4ae;
+}
+/* ------------------ End: CSS Variables ------------------ */
+
+/* ------------------ Start: Main Body Styles ------------------ */
+.container .main-body {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+/* ------------------ Start: Main Body Styles ------------------ */
+
+
+/* ------------------ Start: Input Styles ------------------ */
+.inputs-box-container {
+  max-width:50%;
+  width:100%;
+}
+@media (max-width:768px) {
+  .inputs-box-container {
+    max-width:80%;
+  }
+}
+.container .main-body .container-box .inputs-box-container input {
+  background-color: var(--input-bg-color);
+  box-shadow: 0 0 4px var(--shadow-color);
+  font-weight: 500;
+  color: var(--placeholder-color);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.container .main-body .container-box .inputs-box-container input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.container .main-body .container-box .inputs-box-container input:focus {
+  border-color: var(--focus-border-color);
+  box-shadow: 0 0 6px var(--focus-border-color);
+  background-color: #ffffff;
+}
+
+.container .main-body .container-box .inputs-box-container input::-webkit-inner-spin-button,
+.container .main-body .container-box .inputs-box-container input::-moz-placeholder {
+  -webkit-appearance: none;
+}
+
+.container
+  .main-body
+  .container-box
+  .inputs-box-container
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* ------------------ End: Input Styles ------------------ */
+
+/* ------------------ Start: Circle Styles ------------------ */
+.container .main-body .resault-box .circle {
+  font-size: 28px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: var(--circle-bg-color);
+  border: 2px solid var(--circle-border-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.container .main-body .resault-box .circle:nth-child(odd) {
+  background-color: var(--circle-odd-bg-color);
+  color: var(--circle-text-color-dark);
+}
+
+.container .main-body .resault-box .circle:nth-child(even) {
+  border-color: var(--circle-even-border-color);
+}
+/* ------------------ End: Circle Styles ------------------ */
+
+/* ------------------ Start: Button Styles ------------------ */
+.container .main-body .container-box .btn-box .btn-control {
+  color: var(--btn-text-color);
+  padding: 0.6rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.container .main-body .container-box .btn-box .btn-control:first-child {
+  background-color: var(--btn-primary-bg);
+  box-shadow: 0 2px 6px var(--btn-primary-shadow);
+}
+
+.container .main-body .container-box .btn-box .btn-control:last-child {
+  background-color: var(--btn-secondary-bg);
+  box-shadow: 0 2px 6px var(--btn-secondary-shadow);
+}
+
+/* Hover and Active States for Buttons */
+.container .main-body .container-box .btn-box .btn-control:hover {
+  transform: translateY(-2px);
+}
+
+.container .main-body .container-box .btn-box .btn-control:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px var(--btn-primary-shadow);
+}
+/* ------------------ End: Button Styles ------------------ */
+
+/* ------------------ Start: Error Message Styles ------------------ */
+/* Error Message Styles */
+.error-message {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+  color: #ffffff;
+  background-color: #dc3545;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.error-message.show {
+  visibility: visible;
+  opacity: 1; /*** Fully opaque when active ***/
+}
+/* ------------------ End: Error Message Styles ------------------ */

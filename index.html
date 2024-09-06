@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="./assets/plugins/bootstrap-5.3.3/css/bootstrap.min.css">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/master.css">
+
+    <title>rezarezaei-T13</title>
+
+</head>
+
+<body>
+
+
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+        <main class="main-body">
+            <h1 class="container-title text-center mb-3 text-dark">Game</h1>
+
+            <div class="container-box d-flex flex-column-reverse gap-4 align-items-center justify-content-between">
+
+                <!-- Button Container -->
+                <div class="btn-box d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <button type="button" class="btn-control d-flex align-items-center justify-content-around"
+                        id="shift-right">
+                        Shift Right
+                    </button>
+                    <button type="button" class="btn-control d-flex align-items-center justify-content-around"
+                        id="shift-left">
+                        Shift Left
+                    </button>
+                </div>
+
+                <!-- Input Fields Container -->
+                <div
+                    class="inputs-box-container d-flex flex-column justify-content-center align-items-center gap-3">
+                    <input type="number" class="input-group flex-grow-0 flex-sm-grow-1 px-3 py-2 rounded-pill"
+                        placeholder="Number" id="numberInput" />
+                    <input type="number" class="input-group flex-grow-0 flex-sm-grow-1 px-3 py-2 rounded-pill"
+                        placeholder="Step" id="stepInput" />
+                </div>
+
+                <!-- Error Message Container -->
+                <div class="error-message"></div>
+            </div>
+
+            <!-- Result Box -->
+            <div class="resault-box mw-100 d-flex align-items-center justify-content-center flex-wrap mt-5 gap-3"></div>
+        </main>
+    </div>
+
+
+    <script src="./assets/plugins/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
